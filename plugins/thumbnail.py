@@ -52,7 +52,7 @@ async def save_photo(bot, update):
         )
 
 
-@Clinton.on_message(filters.private & filters.command(["sthumbnail"]))
+@Clinton.on_message(filters.private & filters.command(["set_thumbnail"]))
 async def show_thumb(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
         await bot.delete_messages(
